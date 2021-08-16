@@ -1,8 +1,13 @@
+
 html {
   min-height: 100%;
   position: relative;
 }
-
+p{
+  font-family: 'Nunito', sans-serif;
+  font-size: 2rem;
+  position: relative;
+}
 .container-fluid {
     padding-top: 70px;
     padding-bottom: 70px;
@@ -37,4 +42,24 @@ html {
 	margin-top: 25px;
 	font-size: 12px;
   color: #fff;
+}
+.deleteButton {
+	background:linear-gradient(to bottom, #eae0c2 5%, #ccc2a6 100%);
+	background-color:#eae0c2;
+	border-radius:8px;
+	border:1px solid #333029;
+	display:inline-block;
+	cursor:pointer;
+	color:#505739;
+	font-family:Arial;
+	font-size:14px;
+	padding:5px 9px;
+	text-decoration:none;
+
+  position: absolute;
+  right: 30px;
+}
+.deleteButton:hover {
+	background:linear-gradient(to bottom, #ccc2a6 5%, #eae0c2 100%);
+	background-color:#ccc2a6;
 }

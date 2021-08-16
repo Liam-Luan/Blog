@@ -52,6 +52,15 @@ app.post("/compose", function(req, res){
   });
 });
 
+app.post("/delete", function(req, res){
+  const deleteId = req.body.deleteButton;
+  Post.findByIdAndRemove(deleteId, function(err){
+    if(!err){
+      res.redirect("/");
+    }
+  })
+});
+
 app.get("/posts/:postId", function(req, res){
 
 const requestedPostId = req.params.postId;
@@ -75,7 +84,7 @@ app.get("/contact", function(req, res){
 
 let port = process.env.PORT;
 if (port == null || port == "") {
-  port = 8000;
+  port = 3000;
 }
 
 app.listen(port, function() {
